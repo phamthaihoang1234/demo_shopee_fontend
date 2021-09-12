@@ -1,0 +1,194 @@
+:color {
+    --primary-color: #EE4D2D;
+    /* --primary-color-rgba: rga(238,75,43); */
+    --while-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+     /* sans-serif: chủng chữ không có chân để chờ nó tại fonts của roboto về khi chưa kịp tại về thì nó dùng chủng chữ sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+.grid {
+    /* width: 1200px; */
+    max-width: 100%;
+    /* giúp căn giữa cái thẻ chứa cái class con này  */
+    margin: 0 24px;
+}
+
+.grid_full-width {
+    width: 100%;
+}
+
+.grid_row {
+    /* giúp cho thẻ chứa class này thì đều nằm trên 1 hàng ngang do thuộc tính display : flex */
+    display: flex;
+    /* để cho những thằng con có độ dài vượt quá thằng grid row thì nó sẽ tự động nhảy xuống hàng  */
+    flex-wrap : wrap;
+}
+
+/* Test */
+.grid_column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid_column-2-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 20%;
+}
+
+.grid_column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+}
+
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes growth {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.modal_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal__body {
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+
+.btn {
+    background-color: #fff;
+    min-width: 124px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    outline: none;
+    cursor: pointer;
+    color: #333;
+    display: inline-flex;
+    /* để dòng chữ ra giữa theo chiều rộng  */
+    justify-content: center;
+    /* để dòng chữ ra giữa theo chiều cao */
+    align-items: center;
+    padding: 0 12px;
+    
+}
+
+.btn.btn--nomal:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* hai dấu chấm đứng liền nhau thì yêu cầu phải có cả hai class này */
+.btn.btn--primary {
+    color: #fff;
+    background-color: #EE4D2D;
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+background-color: #c3c3c3;
+
+    /* filter: brightness(80%); dùng để giảm độ sáng */
+}
+
+/* Selection */
+
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.select-input_label {
+    font-size: 1.4rem;
+}
+
+.select-input_icon {
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+
+}
+
+.select-input:hover .select-input_list {
+       display: block;
+}
+
+.select-input_list  {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 8px 10px;
+    list-style: none;
+    display: none;
+
+}
+
+.select-input_link {
+    font-size: 1.4rem;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 12px 0;
+
+}
+
+.select-input_link:hover {
+    color: #EE4D2D;
+}
+
+/* Product item */
+
