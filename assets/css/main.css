@@ -1051,6 +1051,9 @@ font-size: 1.4rem;
     position: relative;
     background-color: #fff;
     margin-top: 24px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
 
 }
 
